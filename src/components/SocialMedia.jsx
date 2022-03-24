@@ -4,7 +4,9 @@ import PropTypes from "prop-types";
 import socialLinks from "settings/socialLinks";
 
 // Icons
-import { BsFacebook, BsInstagram } from "react-icons/bs";
+// import { BsFacebook, BsInstagram } from "react-icons/bs";
+import { RiInstagramLine, RiFacebookFill } from "react-icons/ri";
+// import {FaFacebookF, FaInstagram} from "react-icons/fa";
 
 export default function SocialMedia({ className }) {
   return (
@@ -14,20 +16,26 @@ export default function SocialMedia({ className }) {
         target="blank"
         rel="noreferrer me external"
         aria-label={socialLinks.instagram.ariaLabel}
-        className="flex text-rich font-medium uppercase tracking-wider text-base p-2 hover:opacity-70 transition-opacity duration-default"
+        className="flex p-2 text-base font-medium uppercase tracking-wider text-rich transition-opacity duration-default hover:opacity-70"
       >
-        <BsInstagram aria-label="instagram" className="mr-2" />
-        <span>Instagram</span>
+        <RiInstagramLine
+          aria-label="instagram"
+          className="mr-2 block text-base"
+        />
+        <span className="block">Instagram</span>
       </a>
       <a
         href={socialLinks.facebook.link}
         target="blank"
         rel="noreferrer me external"
         aria-label={socialLinks.facebook.ariaLabel}
-        className="flex text-rich font-medium uppercase tracking-wider text-base p-2 hover:opacity-70 transition-opacity duration-default"
+        className="flex p-2 text-base font-medium uppercase tracking-wider text-rich transition-opacity duration-default hover:opacity-70"
       >
-        <BsFacebook aria-label="facebook" className="mr-2" />
-        <span>Facebook</span>
+        <RiFacebookFill
+          aria-label="facebook"
+          className="mr-2 block scale-115 text-base"
+        />
+        <span className="block">Facebook</span>
       </a>
     </div>
   );

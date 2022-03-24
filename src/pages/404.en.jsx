@@ -2,6 +2,7 @@ import { navigate } from "gatsby";
 
 // Layout
 import AppLayout from "layouts/AppLayout";
+import LangLayout from "layouts/en/LangLayout";
 
 // Global Components
 import Seo from "components/Seo";
@@ -13,32 +14,34 @@ import { HiHome } from "react-icons/hi";
 export default function NotFoundPage() {
   return (
     <AppLayout>
-      <Seo title="404: Stránka nenalezena" robotsEnabled={false} />
+      <LangLayout>
+        <Seo title="404: Page not found" robotsEnabled={false} />
 
-      <header className="w-screen h-screen relative min-h-[640px] bg-body-100">
-        <div className="ui-wrapper h-full flex flex-col justify-center items-center">
-          <span className="ui-heading" data-heading="xl">
-            &#128531;
-          </span>
-          <h1 className="ui-heading text-primary text-3xl sm:text-5xl lg:text-6xl">
-            Stránka nenalezena
-          </h1>
-          <p className="ui-lead text-center mb-16">
-            Ještě nikam neutíkejte! Vypadá to že stránka, kterou se pokoušíte
-            nalézt již neexistuje nebo byla přesunuta. Kliknutím na tlačítko
-            snadno přejdete na hlavní stránku.
-          </p>
-          <Button
-            as="a"
-            onClick={() => {
-              navigate("/");
-            }}
-            IconLeft={<HiHome />}
-          >
-            Hlavní stránka
-          </Button>
-        </div>
-      </header>
+        <header className="relative h-screen min-h-[640px] w-screen bg-body-100">
+          <div className="ui-wrapper flex h-full flex-col items-center justify-center">
+            <span className="ui-heading" data-heading="xl">
+              &#128531;
+            </span>
+            <h1 className="ui-heading text-center text-3xl text-primary sm:text-5xl lg:text-6xl">
+              Page not found
+            </h1>
+            <p className="ui-lead mx-auto mb-16 max-w-3xl text-center">
+              Don't run away yet! It looks like the page you are trying find no
+              longer exists or has been moved. Click the button and you can
+              easily go to the main page.
+            </p>
+            <Button
+              as="a"
+              onClick={() => {
+                navigate("/en/");
+              }}
+              IconLeft={<HiHome />}
+            >
+              Main page
+            </Button>
+          </div>
+        </header>
+      </LangLayout>
     </AppLayout>
   );
 }

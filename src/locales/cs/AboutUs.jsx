@@ -23,7 +23,7 @@ export default function AboutUs() {
           className="text-center font-serif text-xl font-thin !leading-[1.8] md:text-2xl"
         >
           Zažijte nezapomenutelné chvíle v shisha baru The Lounge, který Vás
-          zaujme nejen svým interiérem ale i, bohatou nabídkou vodních dýmek a
+          zaujme nejen svým interiérem, ale i bohatou nabídkou vodních dýmek a
           nápojů. Najdete nás historickém centru Plzně jen pár kroků od náměstí
           Republiky.
         </SlideUp>
